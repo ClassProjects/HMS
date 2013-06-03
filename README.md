@@ -1,5 +1,0 @@
-HMS
-===
-
-Hospital Management System
-
