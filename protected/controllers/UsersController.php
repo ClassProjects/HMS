@@ -99,8 +99,7 @@ class UsersController extends Controller
 
         public function actionThanks()
 	{
-		$this->render('site/index',array(
-		));
+		$this->render('site/index',array());
 	}
 
 	/**

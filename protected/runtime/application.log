@@ -551,3 +551,220 @@ Stack trace:
 REQUEST_URI=/~jorgea/HMS/index.php?r=users/thanks
 HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=site/login
 ---
+2013/06/06 11:51:55 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Operation timed out (trying to connect via tcp://www.caballeromurillo.com:3306) (/Users/jorgea/Sites/yii/framework/db/CDbConnection.php:423)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/jorgea/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive()
+#2 /Users/jorgea/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(438): CWebApplication->getComponent()
+#4 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(623): CWebApplication->getDb()
+#5 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(2309): Users->getDbConnection()
+#6 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(402): model()
+#8 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(77): Users->getMetaData()
+#9 /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php(86): Users->__construct()
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionSignup()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): UsersController->runAction()
+#13 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#16 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /Users/jorgea/Sites/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#19 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#20 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/signup
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (86)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/06 12:13:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=site/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/06 12:13:54 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] Operation timed out (trying to connect via tcp://www.caballeromurillo.com:3306) (/Users/jorgea/Sites/yii/framework/db/CDbConnection.php:423)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/jorgea/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive()
+#2 /Users/jorgea/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(438): CWebApplication->getComponent()
+#4 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(623): CWebApplication->getDb()
+#5 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(2309): Users->getDbConnection()
+#6 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(402): model()
+#8 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(77): Users->getMetaData()
+#9 /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php(86): Users->__construct()
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionSignup()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): UsersController->runAction()
+#13 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#16 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /Users/jorgea/Sites/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#19 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#20 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/signup
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (86)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/06 12:13:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=site/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/06 14:22:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('thanks')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/thanks')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/thanks
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=site/login
+---
+2013/06/06 14:24:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/06 14:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:27:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/singup')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/singup
+---
+2013/06/06 14:27:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/register')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/register
+---
+2013/06/06 14:27:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/jorgea/Sites/yii/framework/web/CController.php:336
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/view')
+#10 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/view
+---
+2013/06/06 14:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signup".' in /Users/jorgea/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/signup')
+#1 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=user/signup
+---
