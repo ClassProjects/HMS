@@ -16,6 +16,7 @@
  */
 class Users extends CActiveRecord
 {
+	public $Confirm;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -42,7 +43,8 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idUsers, Username, Password, Email', 'required'),
+			array('Username, Email, Password, Confirm', 'required'),
+			array('Confirm', 'checkConfirm'), 
 			array('idUsers, Active', 'numerical', 'integerOnly'=>true),
 			array('Username, Password, Email', 'length', 'max'=>45),
 			// The following rule is used by search().
@@ -99,4 +101,19 @@ class Users extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function encrypt($value)
+        {
+            return sha1($value);
+        }
+        
+        public function checkConfirm()
+        {
+            if($this->Password != $this->Confirm)
+            {
+                $this->addError('Confirm', 'Passwords fields doesn\'t match');
+            }
+        }
+
+
 }

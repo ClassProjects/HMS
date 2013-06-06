@@ -42,9 +42,8 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; 2013 ?> by My Company.<br/>
+		Copyright &copy; 2013 by HMS.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 </div><!-- page -->
