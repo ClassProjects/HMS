@@ -49,7 +49,7 @@ class Users extends CActiveRecord
 			array('Username, Password, Email', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idUsers, Username, Password, Email, Active', 'safe', 'on'=>'search'),
+			array('idUsers, Username, Password, Email, Active, Admin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,6 +77,7 @@ class Users extends CActiveRecord
 			'Password' => 'Password',
 			'Email' => 'Email',
 			'Active' => 'Active',
+			'Admin' => 'Admin'
 		);
 	}
 
@@ -100,6 +101,10 @@ class Users extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function isAdmin(){
+		return $this->Admin;
 	}
 
 	public static function encrypt($value)
