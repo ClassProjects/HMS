@@ -836,3 +836,11 @@ Stack trace:
 REQUEST_URI=/~jorgea/HMS/index.php?r=users/admin
 HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/index
 ---
+2013/06/08 18:39:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signup".' in /Users/jorgea/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/signup')
+#1 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=user/signup
+---

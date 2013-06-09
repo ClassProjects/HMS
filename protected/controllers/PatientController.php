@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends Controller
+class PatientController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -28,7 +28,7 @@ class UsersController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','signup'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -37,7 +37,7 @@ class UsersController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>getAdmins(),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -56,55 +56,27 @@ class UsersController extends Controller
 		));
 	}
 
-	public function getAdmins(){
-		Users::search('Admin' = 1)
-		return $arr;
-	}
-
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
 	{
-		$model=new Users;
+		$model=new Patient;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Users']))
+		if(isset($_POST['Patient']))
 		{
-			$model->attributes=$_POST['Users'];
+			$model->attributes=$_POST['Patient'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idUsers));
-
+				$this->redirect(array('view','id'=>$model->idPatient));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
 		));
-	}
-
-
-	public function actionSignup(){
-            
-            $model = new Users;
-            if(isset($_POST['Users']))
-            {
-                $model->attributes=$_POST['Users'];
-                $model->Password=Users::encrypt($model->Password);
-                $model->Confirm=Users::encrypt($model->Confirm);
-                if($model->save())
-                        $this->redirect(array('thanks'));
-            }
-            $this->render('signup',array(
-                'model'=>$model
-            ));
-        } 
-
-        public function actionThanks()
-	{
-		$this->render('site/index',array());
 	}
 
 	/**
@@ -119,11 +91,11 @@ class UsersController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Users']))
+		if(isset($_POST['Patient']))
 		{
-			$model->attributes=$_POST['Users'];
+			$model->attributes=$_POST['Patient'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idUsers));
+				$this->redirect(array('view','id'=>$model->idPatient));
 		}
 
 		$this->render('update',array(
@@ -150,7 +122,7 @@ class UsersController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Users');
+		$dataProvider=new CActiveDataProvider('Patient');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -161,10 +133,10 @@ class UsersController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Users('search');
+		$model=new Patient('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Users']))
-			$model->attributes=$_GET['Users'];
+		if(isset($_GET['Patient']))
+			$model->attributes=$_GET['Patient'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -175,12 +147,12 @@ class UsersController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Users the loaded model
+	 * @return Patient the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Users::model()->findByPk($id);
+		$model=Patient::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -188,11 +160,11 @@ class UsersController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Users $model the model to be validated
+	 * @param Patient $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='users-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='patient-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

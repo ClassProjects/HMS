@@ -16,7 +16,6 @@
  * @property Appointment[] $appointments
  * @property Appointment[] $appointments1
  * @property Specialty $specialtyIdSpecialty
- * @property Users $usersIdUsers
  * @property Record[] $records
  * @property Record[] $records1
  */
@@ -66,11 +65,10 @@ class Doctors extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'appointments' => array(self::HAS_MANY, 'Appointment', 'Doctors_idDoctors'),
-			'appointments1' => array(self::HAS_MANY, 'Appointment', 'Doctors_Users_idUsers'),
+			//'appointments1' => array(self::HAS_MANY, 'Appointment', 'Doctors_Users_idUsers'),
 			'specialtyIdSpecialty' => array(self::BELONGS_TO, 'Specialty', 'Specialty_idSpecialty'),
-			'usersIdUsers' => array(self::BELONGS_TO, 'Users', 'Users_idUsers'),
 			'records' => array(self::HAS_MANY, 'Record', 'Doctors_idDoctors'),
-			'records1' => array(self::HAS_MANY, 'Record', 'Doctors_Users_idUsers'),
+			//'records1' => array(self::HAS_MANY, 'Record', 'Doctors_Users_idUsers'),
 		);
 	}
 

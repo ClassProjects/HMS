@@ -10,6 +10,8 @@
  * @property string $Pat_Address
  * @property string $Pat_Phone
  * @property integer $Users_idUsers
+ * @property string $Pat_Birthdate
+ * @property string $Pat_Weight
  *
  * The followings are the available model relations:
  * @property Appointment[] $appointments
@@ -48,10 +50,11 @@ class Patient extends CActiveRecord
 		return array(
 			array('Pat_Name, Pat_LName, Users_idUsers', 'required'),
 			array('Users_idUsers', 'numerical', 'integerOnly'=>true),
-			array('Pat_Name, Pat_LName, Pat_Address, Pat_Phone', 'length', 'max'=>45),
+			array('Pat_Name, Pat_LName, Pat_Address, Pat_Phone, Pat_Weight', 'length', 'max'=>45),
+			array('Pat_Birthdate', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idPatient, Pat_Name, Pat_LName, Pat_Address, Pat_Phone, Users_idUsers', 'safe', 'on'=>'search'),
+			array('idPatient, Pat_Name, Pat_LName, Pat_Address, Pat_Phone, Users_idUsers, Pat_Birthdate, Pat_Weight', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,6 +86,8 @@ class Patient extends CActiveRecord
 			'Pat_Address' => 'Pat Address',
 			'Pat_Phone' => 'Pat Phone',
 			'Users_idUsers' => 'Users Id Users',
+			'Pat_Birthdate' => 'Pat Birthdate',
+			'Pat_Weight' => 'Pat Weight',
 		);
 	}
 
@@ -103,6 +108,8 @@ class Patient extends CActiveRecord
 		$criteria->compare('Pat_Address',$this->Pat_Address,true);
 		$criteria->compare('Pat_Phone',$this->Pat_Phone,true);
 		$criteria->compare('Users_idUsers',$this->Users_idUsers);
+		$criteria->compare('Pat_Birthdate',$this->Pat_Birthdate,true);
+		$criteria->compare('Pat_Weight',$this->Pat_Weight,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
