@@ -28,16 +28,16 @@ class UsersController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','signup'),
+				'actions'=>array('index'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','signup'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>getAdmins(),
+				'actions'=>array('admin','delete','view'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -56,10 +56,6 @@ class UsersController extends Controller
 		));
 	}
 
-	public function getAdmins(){
-		Users::search('Admin' = 1)
-		return $arr;
-	}
 
 	/**
 	 * Creates a new model.

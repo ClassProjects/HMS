@@ -66,6 +66,12 @@ return array(
 			'password' => 'Minnesota2012$',
 			'charset' => 'utf8',
 		),
+
+			//Role Base Acces Control, se usara para poder crear privilegios
+		'authManager'=>array(
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
+        ),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
