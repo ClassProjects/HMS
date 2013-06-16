@@ -854,3 +854,517 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/~jorgea/HMS/index.php?r=site/signup
 ---
+2013/06/15 01:47:34 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.Admin" is not defined.' in /Users/jorgea/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/jorgea/Sites/HMS/protected/models/Users.php(109): CComponent->__get('Admin')
+#1 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role()
+#2 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#3 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#7 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#12 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=site/login
+---
+2013/06/15 02:00:23 [error] [php] Missing argument 1 for Users::role(), called in /Users/jorgea/Sites/HMS/protected/views/site/index.php on line 209 and defined (/Users/jorgea/Sites/HMS/protected/models/Users.php:108)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#4 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (108)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:01:01 [error] [php] Missing argument 1 for Users::role(), called in /Users/jorgea/Sites/HMS/protected/views/site/index.php on line 209 and defined (/Users/jorgea/Sites/HMS/protected/models/Users.php:108)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#4 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (108)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:01:04 [error] [php] Missing argument 1 for Users::role(), called in /Users/jorgea/Sites/HMS/protected/views/site/index.php on line 209 and defined (/Users/jorgea/Sites/HMS/protected/models/Users.php:108)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#4 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (108)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:01:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Guest' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = Guest ORDER BY Username ASC.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (113)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:01:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Guest' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = Guest ORDER BY Username ASC' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(113): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('Guest')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=site/login
+---
+2013/06/15 02:02:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('thanks')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/thanks')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/thanks
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=site/login
+---
+2013/06/15 02:02:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = jmlb ORDER BY Username ASC.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (117)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:02:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = jmlb ORDER BY Username ASC' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(117): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:03:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username=jmlb ORDER BY Username ASC.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (117)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:03:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username=jmlb ORDER BY Username ASC' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(117): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:08:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = jmlb.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (116)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:08:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'having clause'. The SQL statement executed was: SELECT Username FROM `users` `t` HAVING Username = jmlb' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(116): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:09:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE Username = jmlb.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (116)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:09:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE Username = jmlb' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(116): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:10:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE Username = jmlb.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (116)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:10:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE Username = jmlb' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(116): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:12:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE jmlb.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (116)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:12:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT Username FROM `users` `t` WHERE jmlb' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(116): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:14:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT * FROM `users` `t` WHERE Username = jmlb.
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (115)
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+2013/06/15 02:14:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'jmlb' in 'where clause'. The SQL statement executed was: SELECT * FROM `users` `t` WHERE Username = jmlb' in /Users/jorgea/Sites/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /Users/jorgea/Sites/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/jorgea/Sites/HMS/protected/models/Users.php(115): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Users/jorgea/Sites/HMS/protected/views/site/index.php(209): Users->role('jmlb')
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/thanks
+---
+2013/06/15 02:19:27 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:209)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:19:55 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:209)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (209)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:23:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "speciality/index".' in /Users/jorgea/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('speciality/inde...')
+#1 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=speciality/index
+---
+2013/06/15 02:35:27 [error] [php] strtolower() expects parameter 1 to be string, object given (/Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:112)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(1144): CAccessControlFilter->setRules()
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#2 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#5 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/index
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:35:49 [error] [php] array_map() [<a href='function.array-map'>function.array-map</a>]: Argument #2 should be an array (/Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:112)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#4 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#5 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/index
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:41:27 [error] [php] array_push() expects parameter 1 to be array, null given (/Users/jorgea/Sites/HMS/protected/models/Users.php:127)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(1144): UsersController->accessRules()
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): UsersController->filterAccessControl()
+#2 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(265): UsersController->runActionWithFilters()
+#5 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): UsersController->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/index
+in /Users/jorgea/Sites/HMS/protected/models/Users.php (127)
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (40)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:42:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/admin')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/admin
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/create
+---
+2013/06/15 02:44:17 [warning] [application] Failed to set unsafe attribute "Admin" of "Users".
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (73)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:45:33 [warning] [application] Failed to set unsafe attribute "Admin" of "Users".
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (73)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:48:34 [warning] [application] Failed to set unsafe attribute "Admin" of "Users".
+in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php (73)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 02:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php:181
+Stack trace:
+#0 /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php(55): UsersController->loadModel('')
+#1 [internal function]: UsersController->actionView('')
+#2 /Users/jorgea/Sites/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UsersController), Object(ReflectionMethod), Array)
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/view')
+#14 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/view&id=
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/create
+---
+2013/06/15 03:12:33 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:214)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (214)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 12:48:40 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:214)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (214)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 12:52:55 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:214)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (214)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/15 12:52:57 [error] [php] Object of class Users could not be converted to string (/Users/jorgea/Sites/HMS/protected/views/site/index.php:214)
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Users/jorgea/Sites/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CWebApplication->run()
+REQUEST_URI=/~jorgea/HMS/index.php
+in /Users/jorgea/Sites/HMS/protected/views/site/index.php (214)
+in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
+in /Users/jorgea/Sites/HMS/index.php (13)

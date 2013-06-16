@@ -46,7 +46,8 @@ class Users extends CActiveRecord
 			array('Username, Email, Password, Confirm', 'required'),
 			array('Confirm', 'checkConfirm'), 
 			array('idUsers, Active', 'numerical', 'integerOnly'=>true),
-			array('Username, Password, Email', 'length', 'max'=>45),
+			array('Username, Email', 'length', 'max'=>45),
+			array('Password', 'length', 'max'=>120),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idUsers, Username, Password, Email, Active, Admin', 'safe', 'on'=>'search'),
@@ -104,8 +105,31 @@ class Users extends CActiveRecord
 		));
 	}
 
-	public function isAdmin(){
-		return $this->Admin;
+	public function role($name){
+
+		if ($name == "Guest") {
+			return "Guest";
+		} else {
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Username = :userid';
+		$criteria->params[':userid'] = $name;
+		$rows = self::model()->findAll($criteria);
+   		return $rows[0]->Admin;
+   		}
+   	}
+
+   	public function getAdmins(){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Admin = 3';
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		$retVal = array(); //Nuevo arreglo donde tendremos solo los Usernames
+		
+		for ($i=0; $i < count($rows); $i++) { //For que barre $rows
+			$value = $rows[$i]->Username; //$value sostiene el Username del $rows[i]
+			array_push($retVal, $value); //Se vuarda $value en $retVal
+		}
+   		return $retVal; //Se retorna arreglo de Usernames
+
 	}
 
 	public static function encrypt($value)

@@ -34,6 +34,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'Confirm'); ?>
+		<?php echo $form->passwordField($model,'Confirm',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'Confirm'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'Email'); ?>
 		<?php echo $form->textField($model,'Email',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'Email'); ?>
