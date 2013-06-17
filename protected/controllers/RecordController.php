@@ -81,6 +81,20 @@ class RecordController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+
+		$model=new Record;
+        if(isset($_POST['Item']))
+        {
+            $model->attributes=$_POST['Item'];
+            $model->image=CUploadedFile::getInstance($model,'image');
+            if($model->save())
+            {
+                $model->image->saveAs('../ups/');
+                // redirect to success page
+            }
+        }
+        $this->render('create', array('model'=>$model));
+
 	}
 
 	/**

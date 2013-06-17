@@ -23,7 +23,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Red_Date'); ?>
-		<?php echo $form->textField($model,'Red_Date'); ?>
+		<?php
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   			 'model' => $model,
+   			 'attribute' => 'Red_Date',
+   			 'options' => array(
+   			 	'dateFormat' => 'yy-mm-dd', 
+   			 	),
+   			 'htmlOptions' => array(
+   			     'size' => '10',         // textField size
+   			     'maxlength' => '10',    // textField maxlength
+    			),
+));
+?>
 		<?php echo $form->error($model,'Red_Date'); ?>
 	</div>
 

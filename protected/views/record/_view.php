@@ -33,6 +33,13 @@
 	<?php echo CHtml::encode($data->Patient_idPatient); ?>
 	<br />
 
+	<br><?php echo CHtml::form('','post',array('enctype'=>'multipart/form-data')); ?>
+	<?php echo CHtml::activeFileField($model, 'image'); ?>
+	<?php echo CHtml::endForm(); ?>
+	</br>
+
+	
+
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Prescription_idPrescription')); ?>:</b>
 	<?php echo CHtml::encode($data->Prescription_idPrescription); ?>

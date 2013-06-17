@@ -57,6 +57,11 @@ class Record extends CActiveRecord
 			// Please remove those attributes that should not be searched.
 			array('idRecord, Rec_Title, Red_Date, Rec_Attachment, Rec_Text, Doctors_idDoctors, Patient_idPatient', 'safe', 'on'=>'search'),
 		);
+
+
+			 return array(
+            array('image', 'file', 'types'=>'jpg, gif, png'),
+        );
 	}
 
 	/**
