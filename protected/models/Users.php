@@ -105,22 +105,77 @@ class Users extends CActiveRecord
 		));
 	}
 
-	public function role($name){
+	public function role($name){ //Devuelve el int de Admin 3=Admin 2=Docs 1=Pats
 
 		if ($name == "Guest") {
 			return "Guest";
 		} else {
-		$criteria = new CDbCriteria;
-		$criteria->condition = 'Username = :userid';
-		$criteria->params[':userid'] = $name;
-		$rows = self::model()->findAll($criteria);
-   		return $rows[0]->Admin;
+			$criteria = new CDbCriteria;
+			$criteria->condition = 'Username = :userid';
+			$criteria->params[':userid'] = $name;
+			$rows = self::model()->findAll($criteria);
+	   		return $rows[0]->Admin;
    		}
    	}
+
+   	public function isAdmin($value){
+   		if(Users::role($value) == 3){
+   			return true;
+   		} else {
+   			return false;
+   		}
+   	}
+
 
    	public function getAdmins(){
 		$criteria = new CDbCriteria;
 		$criteria->condition = 'Admin = 3';
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		$retVal = array(); //Nuevo arreglo donde tendremos solo los Usernames
+		
+		for ($i=0; $i < count($rows); $i++) { //For que barre $rows
+			$value = $rows[$i]->Username; //$value sostiene el Username del $rows[i]
+			array_push($retVal, $value); //Se vuarda $value en $retVal
+		}
+   		return $retVal; //Se retorna arreglo de Usernames
+
+	}
+
+	   	public function isDoc($value){
+   		if(Users::role($value) == 2){
+   			return true;
+   		} else {
+   			return false;
+   		}
+   	}
+
+
+   	public function getDocs(){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Admin = 2';
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		$retVal = array(); //Nuevo arreglo donde tendremos solo los Usernames
+		
+		for ($i=0; $i < count($rows); $i++) { //For que barre $rows
+			$value = $rows[$i]->Username; //$value sostiene el Username del $rows[i]
+			array_push($retVal, $value); //Se vuarda $value en $retVal
+		}
+   		return $retVal; //Se retorna arreglo de Usernames
+
+	}
+
+	   	public function isPat($value){
+   		if(Users::role($value) == 1){
+   			return true;
+   		} else {
+   			return false;
+   		}
+   	}
+
+
+   	public function getPat(){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Admin = 1';
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
 		$retVal = array(); //Nuevo arreglo donde tendremos solo los Usernames
 		
