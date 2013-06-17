@@ -92,7 +92,7 @@ class UsersController extends Controller
                 $model->Password=Users::encrypt($model->Password);
                 $model->Confirm=Users::encrypt($model->Confirm);
                 if($model->save())
-                        $this->redirect(array('thanks'));
+                        $this->redirect(array('site/manage'));
             }
             $this->render('signup',array(
                 'model'=>$model

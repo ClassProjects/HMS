@@ -22,11 +22,11 @@
             'items'=>array(
                 array('label'=>'Home', 'url'=>array('/site/index')),
                 array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+                array('label'=>'Create User', 'url'=>array('/users/signup')),
                 array('label'=>'Admin Panel', 'url'=>array('/site/manage'),'visible'=>Users::isAdmin(Yii::app()->user->name)),
                 array('label'=>'Create Record', 'url'=>array('/record/create'),'visible'=>Users::isDoc(Yii::app()->user->name)),
                 array('label'=>'View Records', 'url'=>array('/record/index'),'visible'=>Users::isDoc(Yii::app()->user->name)),
                 array('label'=>'Patient Panel', 'url'=>array('/record/index'),'visible'=>Users::isPat(Yii::app()->user->name)),
-                array('label'=>'Admin Panel', 'url'=>array('/site/manage'),'visible'=>Users::isAdmin(Yii::app()->user->name)),
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),

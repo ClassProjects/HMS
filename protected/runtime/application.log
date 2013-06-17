@@ -2671,3 +2671,45 @@ REQUEST_URI=/hms/index.php?r=record/index
 in C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\models\Patient.php (104)
 in C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\views\record\index.php (22)
 in C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\controllers\RecordController.php (136)
+2013/06/17 12:41:45 [error] [exception.CException] exception 'CException' with message 'UsersController cannot find the requested view "site/index".' in C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('site/index', Array, true)
+#1 C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\controllers\UsersController.php(111): CController->render('site/index', Array)
+#2 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionThanks()
+#3 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('thanks')
+#12 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/thanks')
+#13 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\Users\Rey\Documents\Xampp\htdocs\HMS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/hms/index.php?r=users/thanks
+HTTP_REFERER=http://localhost/hms/index.php?r=users/signup
+---
+2013/06/17 12:42:47 [error] [exception.CException] exception 'CException' with message 'UsersController cannot find the requested view "site/index".' in C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('site/index', Array, true)
+#1 C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\controllers\UsersController.php(111): CController->render('site/index', Array)
+#2 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsersController->actionThanks()
+#3 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('thanks')
+#12 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('users/thanks')
+#13 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\Users\Rey\Documents\Xampp\htdocs\HMS\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/hms/index.php?r=users/thanks
+HTTP_REFERER=http://localhost/hms/index.php?r=users/signup
+---

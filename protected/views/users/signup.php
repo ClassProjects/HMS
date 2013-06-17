@@ -24,11 +24,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->passwordFieldRow($model, 'Confirm', array('class'=>'span3')); ?>
 
         <div>
-        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Create Doctor')); ?>
-        </div>
-        <br>
-        <div>
-        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Create Patient')); ?>
+        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Create')); ?>
         </div>
 <?php $this->endWidget(); ?>
 
