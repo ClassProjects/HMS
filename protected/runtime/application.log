@@ -2283,3 +2283,25 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/hms/index.php?r=record/index$id=1
 ---
+2013/06/17 10:51:05 [error] [php] Undefined offset: 1 (C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\views\record\index.php:30)
+Stack trace:
+#0 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(869): RecordController->renderFile()
+#1 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(782): RecordController->renderPartial()
+#2 C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\controllers\RecordController.php(132): RecordController->render()
+#3 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): RecordController->actionIndex()
+#4 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): RecordController->runAction()
+#6 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): RecordController->filterAccessControl()
+#9 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CController.php(265): RecordController->runActionWithFilters()
+#12 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(282): RecordController->run()
+#13 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Rey\Documents\Xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Rey\Documents\Xampp\htdocs\HMS\index.php(13): CWebApplication->run()
+REQUEST_URI=/hms/index.php?r=record/index
+in C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\views\record\index.php (30)
+in C:\Users\Rey\Documents\Xampp\htdocs\HMS\protected\controllers\RecordController.php (132)
+in C:\Users\Rey\Documents\Xampp\htdocs\HMS\index.php (13)

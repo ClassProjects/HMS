@@ -100,7 +100,7 @@ class Record extends CActiveRecord
 //idPatient idRecord
 	public static function getRecords($id){
 		$criteria = new CDbCriteria;
-		$criteria->condition = 'idRecord = :parm';
+		$criteria->condition = 'Patient_idPatient = :parm';
 		$criteria->params[':parm'] = $id;
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
 		
