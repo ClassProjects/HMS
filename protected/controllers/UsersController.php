@@ -36,7 +36,7 @@ class UsersController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','view','create','update','signup'),
+				'actions'=>array('admin','delete','view','create','update','signup','manage'),
 				'users'=>Users::getAdmins(),
 			),
 			array('deny',  // deny all users
@@ -82,6 +82,7 @@ class UsersController extends Controller
 	}
 
 
+
 	public function actionSignup(){
             
             $model = new Users;
@@ -97,6 +98,13 @@ class UsersController extends Controller
                 'model'=>$model
             ));
         } 
+
+
+        public function actionManage(){
+        	$this->render('manage',array(
+			'model'=>$model,
+		));
+        }
 
         public function actionThanks()
 	{

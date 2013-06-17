@@ -1368,3 +1368,272 @@ REQUEST_URI=/~jorgea/HMS/index.php
 in /Users/jorgea/Sites/HMS/protected/views/site/index.php (214)
 in /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php (32)
 in /Users/jorgea/Sites/HMS/index.php (13)
+2013/06/16 17:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('create')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/create')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=site/create
+---
+2013/06/16 17:20:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('doctors/admin')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=doctors/admin
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=doctors/index
+---
+2013/06/16 17:20:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('doctors/admin')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=doctors/admin
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=doctors/index
+---
+2013/06/16 17:20:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('doctors/create')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=doctors/create
+---
+2013/06/16 17:21:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('doctors/admin')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=doctors/admin
+---
+2013/06/16 17:21:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('doctors/create')
+#9 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=doctors/create
+---
+2013/06/16 18:51:11 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "role".' in /Users/jorgea/Sites/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /Users/jorgea/Sites/HMS/protected/models/Users.php(122): CComponent->__call('role', Array)
+#1 /Users/jorgea/Sites/HMS/protected/models/Users.php(122): SiteController->role('rey')
+#2 /Users/jorgea/Sites/HMS/protected/views/layouts/main.php(26): Users->isAdmin('rey')
+#3 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#4 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', Array, true)
+#5 /Users/jorgea/Sites/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/jorgea/S...', Array, true)
+#6 /Users/jorgea/Sites/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#7 /Users/jorgea/Sites/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#8 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#9 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#10 /Users/jorgea/Sites/HMS/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#11 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#12 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', Array, true)
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/jorgea/S...', Array, true)
+#14 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(32): CController->render('index')
+#15 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#16 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#18 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('')
+#20 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#21 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/~jorgea/HMS/index.php
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=doctors/create
+---
+2013/06/16 19:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/16 19:05:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/16 19:44:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/16 19:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+---
+2013/06/16 20:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+---
+2013/06/16 20:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+---
+2013/06/16 20:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+---
+2013/06/16 20:04:01 [error] [exception.CException] exception 'CException' with message 'UsersController cannot find the requested view "users/manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('users/manage', Array, true)
+#1 /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php(104): CController->render('users/manage', Array)
+#2 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionManage()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#12 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/manage')
+#13 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/manage
+---
+2013/06/16 20:19:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "manage".' in /Users/jorgea/Sites/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(270): CController->missingAction('manage')
+#1 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#2 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/manage')
+#3 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=site/manage
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php
+---
+2013/06/16 20:21:20 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Users/jorgea/Sites/HMS/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(147): TbInput->init()
+#1 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Users/jorgea/Sites/HMS/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Users/jorgea/Sites/HMS/protected/extensions/bootstrap/widgets/TbActiveForm.php(186): TbActiveForm->inputRow('text', NULL, 'Username', NULL, Array)
+#4 /Users/jorgea/Sites/HMS/protected/views/site/manage.php(19): TbActiveForm->textFieldRow(NULL, 'Username', Array)
+#5 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(126): require('/Users/jorgea/S...')
+#6 /Users/jorgea/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/jorgea/S...', NULL, true)
+#7 /Users/jorgea/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/jorgea/S...', NULL, true)
+#8 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('manage', NULL, true)
+#9 /Users/jorgea/Sites/HMS/protected/controllers/SiteController.php(36): CController->render('manage')
+#10 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionManage()
+#11 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Users/jorgea/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('manage')
+#15 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/manage')
+#16 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=site/manage
+---
+2013/06/16 22:18:53 [error] [exception.CException] exception 'CException' with message 'UsersController cannot find the requested view "site/index".' in /Users/jorgea/Sites/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/jorgea/Sites/yii/framework/web/CController.php(782): CController->renderPartial('site/index', Array, true)
+#1 /Users/jorgea/Sites/HMS/protected/controllers/UsersController.php(111): CController->render('site/index', Array)
+#2 /Users/jorgea/Sites/yii/framework/web/actions/CInlineAction.php(49): UsersController->actionThanks()
+#3 /Users/jorgea/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/jorgea/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/jorgea/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/jorgea/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/jorgea/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/jorgea/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/jorgea/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(282): CController->run('thanks')
+#12 /Users/jorgea/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users/thanks')
+#13 /Users/jorgea/Sites/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Users/jorgea/Sites/HMS/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~jorgea/HMS/index.php?r=users/thanks
+HTTP_REFERER=http://localhost/~jorgea/HMS/index.php?r=users/signup
+---
