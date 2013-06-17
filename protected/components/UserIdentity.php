@@ -27,8 +27,4 @@ class UserIdentity extends CUserIdentity
                 return !$this->errorCode;
 	}
 
-    public function getID(){
-        $user = Users::model()->find('Username = :un', array(':un'=>Yii::app()->user->name));
-        return $user->idUsers;
-    }
 }
