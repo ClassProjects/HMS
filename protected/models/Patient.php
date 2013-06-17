@@ -95,6 +95,15 @@ class Patient extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
+
+	public static function getPatientId($id){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Users_idUsers = :userid';
+		$criteria->params[':userid'] = $id;
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		return $rows[0]->idPatient;
+
+	}
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that

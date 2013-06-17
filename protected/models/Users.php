@@ -141,6 +141,14 @@ class Users extends CActiveRecord
 
 	}
 
+	public static function getId($name){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Username = :userid';
+		$criteria->params[':userid'] = $name;
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		return $rows[0]->idUsers;
+	}
+
 	   	public static function isDoc($value){
    		if(Users::role($value) == 2){
    			return true;

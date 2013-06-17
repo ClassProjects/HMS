@@ -92,6 +92,16 @@ class Record extends CActiveRecord
 			//'Patient_Users_idUsers' => 'Patient Users Id Users',
 		);
 	}
+//idPatient idRecord
+	public static function getRecords($id){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'idRecord = :parm';
+		$criteria->params[':parm'] = $id;
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		
+   		return $rows; //Se retorna arreglo de Usernames
+
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
