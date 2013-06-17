@@ -105,7 +105,7 @@ class Users extends CActiveRecord
 		));
 	}
 
-	public function role($name){ //Devuelve el int de Admin 3=Admin 2=Docs 1=Pats
+	public static function role($name){ //Devuelve el int de Admin 3=Admin 2=Docs 1=Pats
 
 		if ($name == "Guest") {
 			return "Guest";
@@ -118,7 +118,7 @@ class Users extends CActiveRecord
    		}
    	}
 
-   	public function isAdmin($value){
+   	public static function isAdmin($value){
    		if(Users::role($value) == 3){
    			return true;
    		} else {
@@ -127,7 +127,7 @@ class Users extends CActiveRecord
    	}
 
 
-   	public function getAdmins(){
+   	public static function getAdmins(){
 		$criteria = new CDbCriteria;
 		$criteria->condition = 'Admin = 3';
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
@@ -141,7 +141,7 @@ class Users extends CActiveRecord
 
 	}
 
-	   	public function isDoc($value){
+	   	public static function isDoc($value){
    		if(Users::role($value) == 2){
    			return true;
    		} else {
@@ -150,7 +150,7 @@ class Users extends CActiveRecord
    	}
 
 
-   	public function getDocs(){
+   	public static function getDocs(){
 		$criteria = new CDbCriteria;
 		$criteria->condition = 'Admin = 2';
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
@@ -164,7 +164,7 @@ class Users extends CActiveRecord
 
 	}
 
-	   	public function isPat($value){
+	   	public static function isPat($value){
    		if(Users::role($value) == 1){
    			return true;
    		} else {
@@ -173,7 +173,7 @@ class Users extends CActiveRecord
    	}
 
 
-   	public function getPat(){
+   	public static function getPat(){
 		$criteria = new CDbCriteria;
 		$criteria->condition = 'Admin = 1';
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
