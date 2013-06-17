@@ -49,13 +49,13 @@ class Record extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Doctors_idDoctors, Doctors_Users_idUsers, Patient_idPatient, Patient_Users_idUsers', 'required'),
-			array('Doctors_idDoctors, Doctors_Users_idUsers, Patient_idPatient, Patient_Users_idUsers', 'numerical', 'integerOnly'=>true),
+			array('Doctors_idDoctors, Patient_idPatient', 'required'),
+			array('Doctors_idDoctors, Patient_idPatient', 'numerical', 'integerOnly'=>true),
 			array('Rec_Title', 'length', 'max'=>45),
 			array('Red_Date, Rec_Attachment, Rec_Text', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idRecord, Rec_Title, Red_Date, Rec_Attachment, Rec_Text, Doctors_idDoctors, Doctors_Users_idUsers, Patient_idPatient, Patient_Users_idUsers', 'safe', 'on'=>'search'),
+			array('idRecord, Rec_Title, Red_Date, Rec_Attachment, Rec_Text, Doctors_idDoctors, Patient_idPatient', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,9 +69,9 @@ class Record extends CActiveRecord
 		return array(
 			'prescriptions' => array(self::HAS_MANY, 'Prescription', 'Record_idRecord'),
 			'doctorsIdDoctors' => array(self::BELONGS_TO, 'Doctors', 'Doctors_idDoctors'),
-			'doctorsUsersIdUsers' => array(self::BELONGS_TO, 'Doctors', 'Doctors_Users_idUsers'),
+			//'doctorsUsersIdUsers' => array(self::BELONGS_TO, 'Doctors', 'Doctors_Users_idUsers'),
 			'patientIdPatient' => array(self::BELONGS_TO, 'Patient', 'Patient_idPatient'),
-			'patientUsersIdUsers' => array(self::BELONGS_TO, 'Patient', 'Patient_Users_idUsers'),
+			//'patientUsersIdUsers' => array(self::BELONGS_TO, 'Patient', 'Patient_Users_idUsers'),
 		);
 	}
 
@@ -87,9 +87,9 @@ class Record extends CActiveRecord
 			'Rec_Attachment' => 'Rec Attachment',
 			'Rec_Text' => 'Rec Text',
 			'Doctors_idDoctors' => 'Doctors Id Doctors',
-			'Doctors_Users_idUsers' => 'Doctors Users Id Users',
+			//'Doctors_Users_idUsers' => 'Doctors Users Id Users',
 			'Patient_idPatient' => 'Patient Id Patient',
-			'Patient_Users_idUsers' => 'Patient Users Id Users',
+			//'Patient_Users_idUsers' => 'Patient Users Id Users',
 		);
 	}
 
@@ -110,9 +110,9 @@ class Record extends CActiveRecord
 		$criteria->compare('Rec_Attachment',$this->Rec_Attachment,true);
 		$criteria->compare('Rec_Text',$this->Rec_Text,true);
 		$criteria->compare('Doctors_idDoctors',$this->Doctors_idDoctors);
-		$criteria->compare('Doctors_Users_idUsers',$this->Doctors_Users_idUsers);
+		//$criteria->compare('Doctors_Users_idUsers',$this->Doctors_Users_idUsers);
 		$criteria->compare('Patient_idPatient',$this->Patient_idPatient);
-		$criteria->compare('Patient_Users_idUsers',$this->Patient_Users_idUsers);
+		//$criteria->compare('Patient_Users_idUsers',$this->Patient_Users_idUsers);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

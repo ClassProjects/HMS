@@ -85,6 +85,7 @@ class Doctors extends CActiveRecord
 			'Doc_Phone' => 'Doc Phone',
 			'Users_idUsers' => 'Users Id Users',
 			'Specialty_idSpecialty' => 'Specialty Id Specialty',
+			
 		);
 	}
 

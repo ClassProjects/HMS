@@ -1,13 +1,16 @@
-<?php
-/* @var $this UsersController */
-/* @var $model Users */
-/* @var $form CActiveForm */
-?>
+<?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Create a Doctor',
+    'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'large', // null, 'large', 'small' or 'mini'
+    'url'=>
+)); ?>
 
+<br><br>
 
-      
-	<?php echo $form->textFieldRow($model, 'Username', array('class'=>'span3')); ?>
-	<?php echo $form->textFieldRow($model, 'Email', array('class'=>'span3')); ?>
-	<?php echo $form->passwordFieldRow($model, 'Password', array('class'=>'span3')); ?>
-	<?php echo $form->passwordFieldRow($model, 'Confirm', array('class'=>'span3')); ?>
+<?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Create a Patient',
+    'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'large', // null, 'large', 'small' or 'mini'
+)); ?>
 
+<?php echo CHtml::button('Button Text', array('submit' => array('controller/action'))); ?>
