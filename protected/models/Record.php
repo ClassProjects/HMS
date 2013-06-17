@@ -98,13 +98,23 @@ class Record extends CActiveRecord
 		);
 	}
 //idPatient idRecord
-	public static function getRecords($id){
+	public static function getRecords($id,$num){
 		$criteria = new CDbCriteria;
-		$criteria->condition = 'Patient_idPatient = :parm';
-		$criteria->params[':parm'] = $id;
+		if($num==1){
+			$criteria->condition = 'Patient_idPatient = :parm';
+			$criteria->params[':parm'] = $id;
 		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
 		
    		return $rows; //Se retorna arreglo de Usernames
+		}//fin if
+		else{
+			$criteria->condition = 'Doctors_idDoctors = :parm';
+			$criteria->params[':parm'] = $id;
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		
+   		return $rows; //Se retorna arreglo de Usernames
+		}
+		
 
 	}
 

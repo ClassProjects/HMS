@@ -89,6 +89,15 @@ class Doctors extends CActiveRecord
 		);
 	}
 
+	public static function getDoctorId($id){
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'Users_idUsers = :userid';
+		$criteria->params[':userid'] = $id;
+		$rows = self::model()->findAll($criteria); //$rows esta lleno de Objetos tipo 'Users'
+		return $rows[0]->idDoctors;
+
+	}
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

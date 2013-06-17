@@ -15,9 +15,15 @@ $this->menu=array(
 <h1>Records</h1>
 
 <?php 
-	$ar=array();
+	
 	if(!Yii::app()->user->isGuest){
-		$ar=Record::getRecords(Patient::getPatientId(Users::getId(Yii::app()->user->name)));
+		$ar=array();
+		if(Users::getUser(Yii::app()->user->name)->Admin==1){
+			$ar=Record::getRecords(Patient::getPatientId(Users::getId(Yii::app()->user->name)),1);
+		}//fin if
+		else{
+			$ar=Record::getRecords(Doctors::getDoctorId(Users::getId(Yii::app()->user->name)),2);
+		}
 
 		for ($i=0; $i <count($ar) ; $i++) {
 			?>
@@ -25,7 +31,6 @@ $this->menu=array(
 			<strong>Rec Title: </strong> <?php echo $ar[$i]->Rec_Title ?><br>
 			<strong>Red Date: </strong> <?php echo $ar[$i]->Red_Date ?><br>
 			<strong>Rec Text: </strong> <?php echo $ar[$i]->Rec_Text ?><br><br><br>
-	
 			<?php 
 		}//fin for
 	}//fin if
