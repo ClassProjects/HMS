@@ -82,6 +82,19 @@ class Users extends CActiveRecord
 		);
 	}
 
+	public static function getAllUsers(){
+			$criteria = new CDbCriteria;
+			$rows = self::model()->findAll($criteria);
+			$retVal = array(); 
+			for ($i=0; $i < count($rows); $i++) { //For que barre $rows
+			$value = $rows[$i]->Username; //$value sostiene el Username del $rows[i]
+			array_push($retVal, $value); //Se vuarda $value en $retVal
+		}
+
+		return $retVal;
+	   		
+	}
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

@@ -9,7 +9,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'record-form',
 	'enableAjaxValidation'=>false,
+	    'htmlOptions'=>array('class'=>'well'),
 )); ?>
+
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -40,26 +42,26 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Rec_Attachment'); ?>
-		<?php echo $form->textField($model,'Rec_Attachment'); ?>
-		<?php echo $form->error($model,'Rec_Attachment'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'Rec_Text'); ?>
 		<?php echo $form->textArea($model,'Rec_Text',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'Rec_Text'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Doctors_idDoctors'); ?>
-		<?php echo $form->textField($model,'Doctors_idDoctors'); ?>
-		<?php echo $form->error($model,'Doctors_idDoctors'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'Patient_idPatient'); ?>
-		<?php echo $form->textField($model,'Patient_idPatient'); ?>
+		<?php
+			$this->widget('zii.widgets.jui.CJuiAutoComplete',array(
+    			'name'=>'Record[Patient_idPatient]',
+    			'source'=>Users::getAllUsers(),
+	    			// additional javascript options for the autocomplete plugin
+	    			'options'=>array(
+	        		'minLength'=>'1',
+    			),
+	    		'htmlOptions'=>array(
+	        	'style'=>'height:20px;',
+	    		),
+			));
+		 ?>
 		<?php echo $form->error($model,'Patient_idPatient'); ?>
 	</div>
 
@@ -74,5 +76,6 @@
 	</div>
 
 <?php $this->endWidget(); ?>
+
 
 </div><!-- form -->

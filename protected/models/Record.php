@@ -50,7 +50,7 @@ class Record extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Doctors_idDoctors, Patient_idPatient', 'required'),
-			array('Doctors_idDoctors, Patient_idPatient', 'numerical', 'integerOnly'=>true),
+			array('Doctors_idDoctors', 'numerical', 'integerOnly'=>true),
 			array('Rec_Title', 'length', 'max'=>45),
 			array('Red_Date, Rec_Attachment, Rec_Text', 'safe'),
 			// The following rule is used by search().
@@ -108,6 +108,13 @@ class Record extends CActiveRecord
 
 	}
 
+	public function setIdPat($id){
+		$this->Patient_idPatient = $id;
+	}
+
+	public function setIdDoc($id){
+		$this->Doctors_idDoctors = $id;
+	}
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

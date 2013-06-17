@@ -74,6 +74,8 @@ class RecordController extends Controller
 		if(isset($_POST['Record']))
 		{
 			$model->attributes=$_POST['Record'];
+			$model->setIdPat(Patient::getPatientId(Users::getId($model->Patient_idPatient)));
+			$model->setIdDoc(Users::getId(Yii::app()->user->name));
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idRecord));
 		}
@@ -82,18 +84,6 @@ class RecordController extends Controller
 			'model'=>$model,
 		));
 
-		$model=new Record;
-        if(isset($_POST['Item']))
-        {
-            $model->attributes=$_POST['Item'];
-            $model->image=CUploadedFile::getInstance($model,'image');
-            if($model->save())
-            {
-                $model->image->saveAs('../ups/');
-                // redirect to success page
-            }
-        }
-        $this->render('create', array('model'=>$model));
 
 	}
 
