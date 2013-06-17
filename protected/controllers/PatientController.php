@@ -70,6 +70,10 @@ class PatientController extends Controller
 		if(isset($_POST['Patient']))
 		{
 			$model->attributes=$_POST['Patient'];
+
+			$model->setUid(Users::getId($model->Users_idUsers));
+			$this->changeAdmin(Users::getId($model->Users_idUsers), 1);
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idPatient));
 		}

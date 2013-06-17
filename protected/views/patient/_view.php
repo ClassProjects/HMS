@@ -31,7 +31,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Pat_Weight')); ?>:</b>
 	<?php echo CHtml::encode($data->Pat_Weight); ?>
-	<br />
+	<br /> <br><br>
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Users_idUsers')); ?>:</b>

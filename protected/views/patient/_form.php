@@ -15,6 +15,24 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+		<div class="row">
+		<?php echo $form->labelEx($model,'Users_idUsers'); ?>
+		<?php
+			$this->widget('zii.widgets.jui.CJuiAutoComplete',array(
+    			'name'=>'Patient[Users_idUsers]',
+    			'source'=>Users::getAllUsers(),
+	    			// additional javascript options for the autocomplete plugin
+	    			'options'=>array(
+	        		'minLength'=>'1',
+    			),
+	    		'htmlOptions'=>array(
+	        	'style'=>'height:20px;',
+	    		),
+			));
+		 ?>
+		<?php echo $form->error($model,'Users_idUsers'); ?>
+	</div>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'Pat_Name'); ?>
 		<?php echo $form->textField($model,'Pat_Name',array('size'=>45,'maxlength'=>45)); ?>
@@ -41,7 +59,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Pat_Birthdate'); ?>
-		<?php echo $form->textField($model,'Pat_Birthdate'); ?>
+				<?php
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+   			 'model' => $model,
+   			 'attribute' => 'Pat_Birthdate',
+   			 'options' => array(
+   			 	'dateFormat' => 'yy-mm-dd', 
+   			 	),
+   			 'htmlOptions' => array(
+   			     'size' => '10',         // textField size
+   			     'maxlength' => '10',    // textField maxlength
+    			),
+));
+?>
 		<?php echo $form->error($model,'Pat_Birthdate'); ?>
 	</div>
 
@@ -51,11 +81,7 @@
 		<?php echo $form->error($model,'Pat_Weight'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Users_idUsers'); ?>
-		<?php echo $form->textField($model,'Users_idUsers'); ?>
-		<?php echo $form->error($model,'Users_idUsers'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

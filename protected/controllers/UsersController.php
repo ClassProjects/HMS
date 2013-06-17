@@ -56,6 +56,19 @@ class UsersController extends Controller
 		));
 	}
 
+	public function changeAdmin($id,$val){
+		$model=$this->loadModel($id);
+
+		$model->Admin = $val;
+
+		if($model->save())
+				$this->redirect(array('view','id'=>$model->idUsers));
+
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
 
 	/**
 	 * Creates a new model.
