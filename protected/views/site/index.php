@@ -235,13 +235,8 @@
           <img src="./img/doc3.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-<<<<<<< HEAD
               <h1>Medical History, Simplified.</h1>
               <p class="lead">Easy access for Doctors to your past medical history in order to diagnose causes and solutions faster.</p>
-=======
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
->>>>>>> 7506608d01a049103e93f97fdbb1ad9f746e470b
               <a class="btn btn-large btn-inverse" href="#">Browse gallery</a>
             </div>
           </div>
