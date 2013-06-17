@@ -216,7 +216,7 @@
             <div class="carousel-caption">
               <h1>HMS</h1>
               <p class="lead">Honduras Medical Center is proud to provide comprehensive inpatient and outpatient health services designed to meet the needs and expectations of all our patients.</p>
-              <a class="btn btn-large btn-inverse" href="#">Login in</a>
+              <a class="btn btn-large btn-inverse" href="#">Log in</a>
             </div>
           </div>
         </div>
@@ -224,8 +224,8 @@
           <img src="./img/doc2.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Cutting Edge Specialists.</h1>
+              <p class="lead">The best Doctors around equipped with the best techniques, all for your benefit.</p>
               <a class="btn btn-large btn-inverse" href="#">Learn more</a>
             </div>
           </div>
@@ -234,8 +234,8 @@
           <img src="./img/doc3.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Medical History, Simplified.</h1>
+              <p class="lead">Easy access for Doctors to your past medical history in order to diagnose causes and solutions faster.</p>
               <a class="btn btn-large btn-inverse" href="#">Browse gallery</a>
             </div>
           </div>
@@ -254,19 +254,19 @@
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="http://www.clker.com/cliparts/1/4/7/0/1207314060955899368hospital%20blue.svg.hi.png">
           <h2>Health Plans</h2>
-          <p>Innovative plans offering personal health and your family too.. For more details click the link below Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>Innovative and accessible plans offering personal healthcare for yourslef and your family too.. For more details click the link below.</p>
           <p><a class="btn" href="#">View details »</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="http://www.medindia.net/health-images/health-symbol-1.jpg">
           <h2>Medical Directory</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>The best Doctors from the area all available and ready to overcome whatever you need. Click the link below to see some of the Doctors waiting for you.</p>
           <p><a class="btn" href="#">View details »</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="http://upload.wikimedia.org/wikipedia/commons/c/c8/WA_road_sign_hospital_symbol.png">
-          <h2>Events</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <h2>Medicine + Tech</h2>
+          <p>Combining the best of both worlds to give all our clients the treatment they deserve. By empowering Doctors with the latest technology we guarantee we will be able to help you faster.</p>
           <p><a class="btn" href="#">View details »</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
